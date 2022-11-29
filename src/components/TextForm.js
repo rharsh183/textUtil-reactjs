@@ -71,7 +71,7 @@ const [text, setText] = useState("");
         <h3>Your text summary</h3>
         <p>{text.split(" ").filter((element)=>{return element.length!=0}).length} words and {text.length} characters</p>
         <p>{0.008 * text.split(" ").filter((element)=>{return element.length!=0}).length} Minutes read</p>
-        <h3>Preview</h3>
+        <h4>Preview</h4>
         <p>{text.length>0?text: "Nothing to preview here"}</p>
     </div>
     </>
