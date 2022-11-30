@@ -6,10 +6,8 @@ import About from './components/About';
 import React, { useState } from 'react';
  import {
    BrowserRouter as Router,
-   RouterProvider,
    Route,
-   Routes,
-   Link,
+   Routes
  } from "react-router-dom";
 
 function App() { 
@@ -47,9 +45,8 @@ function App() {
           <Alert alert={alert}/>
           <div className="container my-3">
            <Routes>
+           <Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Try TextUtils - Word Counter, Character Counter" mode={mode}/>} />
             <Route exact path="/about" element = {<About mode= {mode}/>} /> 
-              
-            <Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Try TextUtils - Word Counter, Character Counter" mode={mode}/>} />
           </Routes> 
           
         </div>
